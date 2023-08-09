@@ -1,0 +1,14 @@
+docker name volumes:-
+  it store the data in docker storage
+  docker run -it --name my -v data/:data ubuntu
+  ------------------------------------------------
+
+  docker bind mount volume:--
+    it store the data in local storage
+    docker run -it --name my -v /my/data:/data ubuntu
+
+
+    ----------------------------------------
+    how to attach used volume to other container:--
+
+      docker run -it --volumes-from (container name of the used volume) --name my1 ubuntu
